@@ -1,0 +1,40 @@
+/* Variables */
+$main-font: 'Baskervville', serif;
+$golden-font: 'Great Vibes', cursive;
+
+/* Globals */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* navigation */
+.navigation {
+  h2 {
+    font-family: $golden-font;
+    color: gold;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: inline;
+      a {
+        
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+    }
+  }
+}

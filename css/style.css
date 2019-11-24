@@ -1,0 +1,42 @@
+/* Variables */
+/* Globals */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Baskervville", serif;
+  background-color: black;
+}
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* navigation */
+.navigation h2 {
+  font-family: "Great Vibes", cursive;
+  color: gold;
+}
+
+.navigation ul {
+  list-style-type: none;
+}
+
+.navigation ul li {
+  display: inline;
+}
+
+.navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+/*# sourceMappingURL=style.css.map */
