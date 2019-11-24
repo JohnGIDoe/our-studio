@@ -10,20 +10,28 @@ body {
 }
 
 .container {
+  max-width: 1140px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-direction: row;
       flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 /* navigation */
+.navigation {
+  background-color: transparent;
+  padding: 0 auto;
+  height: 100px;
+}
+
 .navigation h2 {
   font-family: "Great Vibes", cursive;
   color: gold;
+  font-size: 32px;
 }
 
 .navigation ul {
@@ -35,8 +43,59 @@ body {
 }
 
 .navigation ul li a {
+  font-size: 24px;
   color: #fff;
   text-decoration: none;
   margin-left: 20px;
+}
+
+/* splash */
+.splash {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.splash .splash-image {
+  position: absolute;
+  top: -108px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.splash .splash-image img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.splash .splash-inner {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.splash .splash-inner .page-title {
+  font-size: 56px;
+  font-weight: 4000;
+}
+
+.splash .splash-inner .page-subtitle {
+  font-size: 36px;
+}
+
+.splash .splash-inner button {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  background-color: gold;
+  font-size: 16px;
+  font-weight: 2000;
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
