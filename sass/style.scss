@@ -3,13 +3,9 @@ $main-font: 'Baskervville', serif;
 $golden-font: 'Great Vibes', cursive;
 
 /* Globals */
-*, ::after, ::before {
-  box-sizing: border-box;
-}
 
 body {
   font-family: $main-font;
-  background-color: black;
 }
 
 .container {
@@ -17,7 +13,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 36px;
+  padding: 0 auto;
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 /* navigation */
@@ -25,6 +40,9 @@ body {
   background-color: transparent;
   padding: 0 auto;
   height: 100px;
+  .container {
+    justify-content: space-between;
+  }
   h2 {
     font-family: $golden-font;
     color: gold;
@@ -83,6 +101,58 @@ body {
       font-size: 16px;
       font-weight: 2000;
       outline: none;
+    }
+  }
+}
+
+/* services */
+.services {
+  margin-bottom: 100px;
+  text-align: center;
+  i {
+    font-size: 48px;
+    color: gold;
+  }
+}
+
+/* portfolio */
+.portfolio {
+  padding: 100px 0;
+  background-color:#EBE9EB;
+  text-align: center;
+  .row {
+    padding-bottom: 30px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+  }
+  .card-image {
+    height:300px;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .card-body {
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* footer */
+.footer {
+  .container {
+    justify-content: flex-start;
+    flex-direction: row;
+    .row {
+      i {
+        text-align: center;
+      }
     }
   }
 }
