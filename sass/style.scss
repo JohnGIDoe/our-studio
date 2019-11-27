@@ -39,22 +39,24 @@ body {
   background-color: transparent;
   padding: 0 auto;
   height: 100px;
-  .container {
-    justify-content: space-between;
-    h2 {
-      font-family: $golden-font;
-      color: gold;
-      font-size: 32px;
-    }
-    ul {
-      list-style-type: none;
-      li {
-        display: inline;
-        a {
-          font-size: 24px;
-          color: #fff;
-          text-decoration: none;
-          margin-left: 20px;
+  .container-fluid {
+    .row {
+      justify-content: space-around;
+      h2 {
+        font-family: $golden-font;
+        color: gold;
+        font-size: 24px;
+      }
+      ul {
+        list-style-type: none;
+        li {
+          display: inline;
+          a {
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+          }
         }
       }
     }
@@ -84,6 +86,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    margin-top: -108;
     text-align: center;
     .page-title {
       font-size: 56px;
@@ -98,7 +101,7 @@ body {
       color: #fff;
       background-color: gold;
       font-size: 16px;
-      font-weight: 2000;
+      font-weight: 400;
       outline: none;
     }
   }
@@ -131,13 +134,14 @@ body {
         img {
           height: 100%;
           width: 100%;
-          object-fit: cover;
+          object-fit: down-scale;
         }
       }
       .card-body {
         background-color: #fff;
         align-items: center;
         justify-content: center;
+        padding-bottom: 5px;
       }
     }
   }
@@ -147,7 +151,7 @@ body {
 .footer {
   height: 100px;
   padding: 50px;
-  .container {
+  .container-fluid {
     justify-content: space-between;
     position: relative;
     .icons {
@@ -163,6 +167,73 @@ body {
           a {
             color: black;
           }
+        }
+      }
+    }
+  }
+}
+
+/* Media */
+@media (max-width: 768px) {
+  .navigation {
+    .container-fluid {
+      .row {
+        justify-content: space-evenly;
+        flex-direction: row;
+        h2 {
+          font-size: 12px;
+          text-align: center;
+        }
+        ul {
+          li {
+            a {
+              font-size: 10px;
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .splash {
+    .splash-inner {
+      .page-subtitle {
+        font-size: 18px;
+        padding: 20px 0;
+      }
+      .page-title {
+        font-size: 24px;
+        padding-bottom: 20px;
+      }
+      button {
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+      }
+    }
+  }
+  .portfolio {
+    .card {
+      padding: 5px 0;
+    }
+  }
+  .footer {
+    height: 50px;
+    padding: 10px;
+    .container-fluid {
+      flex-direction: column;
+      align-content: center;
+      .row.icons {
+        i {
+          font-size: 16px;
+          order: -1;
+        }
+      }
+      .row.copy {
+        justify-content: center;
+        .copyright {
+          margin-bottom: 2px;
+          text-align: center;
         }
       }
     }
